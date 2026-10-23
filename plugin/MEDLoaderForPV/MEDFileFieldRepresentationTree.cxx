@@ -224,14 +224,14 @@ public:
 };
 
 template<>
-#ifdef WIN32
+#if defined(WIN32) || defined(__APPLE__)
 class MEDFileVTKTraits<long long>
 #else
 class MEDFileVTKTraits<long>
 #endif
 {
 public:
-#ifdef WIN32
+#if defined(WIN32) || defined(__APPLE__)
   typedef vtkLongLongArray VtkType;
 #else
   typedef vtkLongArray VtkType;
