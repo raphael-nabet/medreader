@@ -51,7 +51,7 @@
 #include "vtkIntArray.h"
 #include "vtkLongArray.h"
 #include "vtkNew.h"
-#ifdef WIN32
+#if defined(WIN32) || defined(__APPLE__)
 #include "vtkLongLongArray.h"
 #endif
 #include "vtkFloatArray.h"
